@@ -1,4 +1,7 @@
-<?php 
+<?php
+
+    // Include the catalog data
+    include("includes/data.php");
 
     // Declare the page title and section
     $pageTitle = "Full Catalog";
@@ -27,8 +30,21 @@
 
 ?>
 
-<div class="section page">
-    <h1><?php echo $pageTitle; ?></h1>
+<div class="section catalog page">
+    <div class="wrapper">
+        <h1><?php echo $pageTitle; ?></h1>
+        <ul class="items">
+            <?php 
+            foreach($catalog as $item) {
+                echo "<li><a href='#'><img src='" 
+                    . $item["img"] . "' alt='" 
+                    . $item["title"] . "'/>" 
+                    . "<p> View Details</p>" 
+                    . "</a></li>";
+            }
+            ?>
+        </ul>
+    </div>
 </div>
 
 <?php 
