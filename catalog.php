@@ -2,6 +2,7 @@
 
     // Include the catalog data
     include("includes/data.php");
+    include("includes/functions.php");
 
     // Declare the page title and section
     $pageTitle = "Full Catalog";
@@ -35,12 +36,9 @@
         <h1><?php echo $pageTitle; ?></h1>
         <ul class="items">
             <?php 
-            foreach($catalog as $item) {
-                echo "<li><a href='#'><img src='" 
-                    . $item["img"] . "' alt='" 
-                    . $item["title"] . "'/>" 
-                    . "<p> View Details</p>" 
-                    . "</a></li>";
+            $categories = array_category($catalog, $section);
+            foreach($categories as $id) {
+                echo get_item_html($id, $catalog[$id]);
             }
             ?>
         </ul>
