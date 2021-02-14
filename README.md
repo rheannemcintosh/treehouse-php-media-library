@@ -33,4 +33,4 @@ A PHP application which displays various media types on a site. Users can view a
 - Allow for media items to be added through admin functionality
 
 ## Fun Fact
-This was on of the first PHP tutorials I ever did, which ended with me landing my current job less than a year later!
+This was one of the first PHP tutorials I ever did, which ended with me landing my current job less than a year later!
